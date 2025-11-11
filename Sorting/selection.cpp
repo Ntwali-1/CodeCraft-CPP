@@ -1,30 +1,29 @@
 #include <iostream>
 using namespace std;
 
-int selectionSort(int arr[], int n){
+int selection(int arr[], int n){
     for(int i=0;i<n-1;i++){
-        int min_index = i;
-        for(int j=i+1;j<n;j++){
-            if(arr[j] < arr [min_index]){
-                min_index = j;
+        int md = i;
+        for(int j = i+1;j<n;j++){
+            if(arr[j] < arr[md]){
+                md = j;
             }
         }
-        if(min_index!=i){
-            swap(arr[i],arr[min_index]);
+        if(md != i){
+            swap(arr[md], arr[i]);
         }
     }
 
     return 0;
-
 }
 
-int main (){
-    int arr[6] = {60,50,40,30,20,10};
-    int n = 6;
+int main(){
+    int arr[] = {3,4,5,2};
+    int n = 4;
 
-    selectionSort(arr,n);
+    selection(arr, n);
 
-    for(int i=0;i<n;i++){
+    for (int i=0;i<n;i++){
         cout << arr[i] << endl;
     }
 }
