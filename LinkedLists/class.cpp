@@ -28,6 +28,19 @@ int main () {
     n4->data = 40;
     n4->next = NULL;
 
-    display(n1);
+    Node *head = n1;
+
+
+    display(head);
+
+    cout << "\n" << endl;
+
+    Node *n5 = new Node();
+    n5->data = 0;
+    n5->next = n1;
+    head = n5;
+
+    display(head);
+
     return 0;
 }
