@@ -13,6 +13,16 @@ void display(Node *head){
         }
 }
 
+Node *deleteFirstNode(Node * head){
+    if(head == null){
+        return NULL;
+    }
+    Node *temp = head;
+    head = temp->next;
+    delete temp;
+    return head;
+}
+
 int main () {
     Node *n1 = new Node();
     Node *n2 = new Node();
