@@ -14,7 +14,7 @@ class Node{
 
 void display(Node *head){
     while(head != NULL){
-        cout << head->data << "->";
+        cout << head->data << " ";
         head = head->next;
     }
 }
